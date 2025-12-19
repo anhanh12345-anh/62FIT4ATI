@@ -1,31 +1,71 @@
 # 62FIT4ATI
-# Diabetes Risk Prediction Using MLP
-
-This repository presents a **diabetes risk prediction system** based on a **Feedforward Neural Network (Multi-Layer Perceptron – MLP)** trained on the **CDC BRFSS dataset**.  
-The project addresses **class imbalance** using **SMOTE** and prioritizes **high Recall**, which is crucial for medical decision-support systems.
+## Diabetes Risk Prediction Using Machine Learning & MLP
+This project focuses on predicting diabetes risk using the CDC BRFSS dataset. Multiple machine learning models are implemented and compared, with a primary emphasis on a Multilayer Perceptron (MLP) neural network optimized for medical relevance, especially Recall for at-risk patients.
 
 ---
 
-## Problem Overview
-
-- **Task**: Binary classification  
-  - `0` – Healthy  
-  - `1` – At Risk (Prediabetes + Diabetes)
-- **Dataset size**: 269,131 samples
-- **Class imbalance**: ~84% Healthy, ~16% At Risk
-- **Goal**: Minimize false negatives by improving Recall for at-risk individuals
+## Problem Definition
+Task: Binary classification
+Objective: Predict whether a person is at risk of diabetes
+Classes:
+0 – No Diabetes
+1 – At Risk (Prediabetes + Diabetes)
+Due to the strong class imbalance in the dataset, the project prioritizes Recall and ROC-AUC rather than Accuracy alone.
+ls
 
 ---
 
-## Features
+## Dataset Description
+Source: CDC BRFSS (Behavioral Risk Factor Surveillance System)
+Shape: (269,131 samples, 22 columns)
+Target Variable: Diabetes_binary
+Input Features: 21 features
+**Input Features (21)**
+**Demographics:**
+Age (13 levels)
+Sex (Male/Female)
+Education (1–6)
+Income (1–8)
+**Health Conditions:**
+HighBP
+HighChol
+CholCheck
+BMI
+Stroke
+HeartDiseaseorAttack
+**Lifestyle / Habits:**
+Smoker
+PhysActivity
+Fruits
+Veggies
+HvyAlcoholConsump
+**General Health:**
+GenHlth (1–5)
+MentHlth
+PhysHlth
+DiffWalk
+**Healthcare Access:**
+AnyHealthcare
+NoDocbcCost
 
-- **21 input features**, grouped as:
-  - **Demographics**: Age, Sex, Education, Income
-  - **Health Conditions**: HighBP, HighChol, CholCheck, BMI, Stroke, HeartDiseaseorAttack
-  - **Lifestyle Factors**: Smoker, Physical Activity, Alcohol Consumption, Fruits, Veggies
-  - **General Health**: GenHlth, MentHlth, PhysHlth, DiffWalk
-  - **Healthcare Access**: AnyHealthcare, NoDocbcCost
-- **Binary output**: Diabetes risk prediction
+---
+## Models Implemented
+
+The following models are trained and evaluated:
+Logistic Regression (Baseline)
+Random Forest Classifier
+Multilayer Perceptron (MLP) – Main focus
+
+---
+## Visualizations Included
+Target class distribution (before & after binarization)
+Correlation heatmap
+Feature histograms (BMI, Age, GenHlth)
+Training & validation loss curves (MLP)
+Training & validation accuracy curves (MLP)
+Confusion matrix
+ROC curve
+Precision–Recall vs Threshold curve
 
 ---
 
@@ -33,10 +73,13 @@ The project addresses **class imbalance** using **SMOTE** and prioritizes **high
 
 | File | Description |
 |---|---|
-| `62FIT4ATI_Group_19_Topic_1.ipynb` | Main Jupyter notebook containing preprocessing, modeling, evaluation, and inference |
-| `report.docx` | Project report |
-| `diabetes_risk_model.joblib` | Trained MLP model |
-| `scaler.joblib` | StandardScaler used for preprocessing |
+| `62FIT4ATI_Group 16_Topic 1.ipynb` | Main Jupyter notebook containing preprocessing, modeling, evaluation, and inference |
+| `62FIT4ATI_Group 16_Topic 1_REPORT.docx` | Project report |
+| `mlp_diabetes_model.h5` | Trained MLP model |
+| `scaler.pkl` | StandardScaler used for preprocessing |
+| `random_forest_model.pkl` |  |
+| `logistic_regression_model.pkl` |  |
+| `feature_names.pkl` |  |
 | `requirements.txt` | Project dependencies |
 | `README.md` | Project documentation |
 
@@ -44,7 +87,6 @@ The project addresses **class imbalance** using **SMOTE** and prioritizes **high
 
 ## Setup Guide
 
-### 1. Clone the Repository
+### Clone the Repository
 ```bash
-git clone https://github.com/Primo23-w/62FIT4ATI_Group-19_Topic-1.git
-cd 62FIT4ATI_Group_19_Topic_1
+git clone 
