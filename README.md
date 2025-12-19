@@ -77,8 +77,6 @@ Precision–Recall vs Threshold curve
 | `62FIT4ATI_Group 16_Topic 1_REPORT.docx` | Project report |
 | `mlp_diabetes_model.h5` | Trained MLP model |
 | `scaler.pkl` | StandardScaler used for preprocessing |
-| `random_forest_model.pkl` |  |
-| `logistic_regression_model.pkl` |  |
 | `feature_names.pkl` |  |
 | `requirements.txt` | Project dependencies |
 | `README.md` | Project documentation |
