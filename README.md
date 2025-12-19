@@ -1,4 +1,4 @@
-# 62FIT4ATI
+# 62FIT4ATI_GROUP 16_TOPIC 01
 ## Diabetes Risk Prediction Using Machine Learning & MLP
 This project focuses on predicting diabetes risk using the CDC BRFSS dataset. Multiple machine learning models are implemented and compared, with a primary emphasis on a Multilayer Perceptron (MLP) neural network optimized for medical relevance, especially Recall for at-risk patients.
 
